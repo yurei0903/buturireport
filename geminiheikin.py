@@ -7,8 +7,8 @@ frame = 44100      # サンプルレート（Hz）
 num_files = 10     # ファイルの数
 
 # 1. 全てのWAVファイルを読み込む
-for i in range(1, num_files + 1):
-  file_name = f"majac{i}.wav"  # f-stringを使うとシンプルに書けます
+for i in range(0, num_files):
+  file_name = f"rokuonsitaoto/do{i}.wav"  # f-stringを使うとシンプルに書けます
   print(f"読み込み中: {file_name}")
   try:
     # librosa.loadはデフォルトでfloat32のnumpy配列を返す
@@ -34,7 +34,7 @@ else:
   print("平均化処理が完了しました。")
 
   # 4. soundfileを使ってファイルに書き出す
-  output_file = "heikin_majac.wav"
+  output_file = "heikin_do.wav"
   # heikin（float配列）とサンプリング周波数を渡すだけでOK
   sf.write(output_file, heikin, frame)
 

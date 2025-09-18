@@ -21,7 +21,7 @@ def main():
   sd.wait()
   print(len(oto_data))
 
-  output_file = "aaa.wav"
+  output_file = "rokuonsitaoto\do5.wav"
   with wave.open(output_file, 'wb') as wf:
     wf.setnchannels(channels)
     wf.setsampwidth(2)  # 16ビットオーディオの場合、サンプル幅は2バイト
